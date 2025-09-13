@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>User, Group & Role Management</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            padding: 20px;
+        }
+        h2 {
+            color: #333;
+        }
+        .section {
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 8px rgba(0,0,0,0.1);
+            margin-bottom: 20px;
+            padding: 20px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+        th, td {
+            padding: 10px;
+            border: 1px solid #ddd;
+        }
+        input, select, button {
+            padding: 8px;
+            margin: 5px 0;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+        }
+        button:hover {
+            background-color: #45a049;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>User, Group, and Role Management</h1>
+
+    <!-- User Management Section -->
+    <div class="section" id="user-management">
+        <h2>Manage Users</h2>
+        <form>
+            <input type="text" placeholder="User Name" required />
+            <input type="email" placeholder="Email" required />
+            <select required>
+                <option value="">Select Role</option>
+                <option value="admin">Admin</option>
+                <option value="editor">Editor</option>
+                <option value="viewer">Viewer</option>
+            </select>
+            <button type="submit">Add User</button>
+        </form>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>User Name</th>
+                    <th>Email</th>
+                    <th>Role</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Example User Entry -->
+                <tr>
+                    <td>John Doe</td>
+                    <td>john@example.com</td>
+                    <td>Admin</td>
+                    <td>
+                        <button>Edit</button>
+                        <button>Delete</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Group Management Section -->
+    <div class="section" id="group-management">
+        <h2>Manage Groups</h2>
+        <form>
+            <input type="text" placeholder="Group Name" required />
+            <button type="submit">Create Group</button>
+        </form>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Group Name</th>
+                    <th>Members</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Example Group Entry -->
+                <tr>
+                    <td>Developers</td>
+                    <td>5 Users</td>
+                    <td>
+                        <button>Edit</button>
+                        <button>Delete</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Role and Permissions Section -->
+    <div class="section" id="role-management">
+        <h2>Manage Roles and Permissions</h2>
+        <form>
+            <input type="text" placeholder="Role Name" required />
+            <select multiple required>
+                <option value="read">Read Access</option>
+                <option value="write">Write Access</option>
+                <option value="delete">Delete Access</option>
+                <option value="manage">Manage Users</option>
+            </select>
+            <button type="submit">Create Role</button>
+        </form>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Role</th>
+                    <th>Permissions</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Example Role Entry -->
+                <tr>
+                    <td>Editor</td>
+                    <td>Read, Write</td>
+                    <td>
+                        <button>Edit</button>
+                        <button>Delete</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Workflow Section -->
+    <div class="section" id="workflow-management">
+        <h2>Workflow & Access Control</h2>
+        <form>
+            <select required>
+                <option value="">Select User</option>
+                <option value="john">John Doe</option>
+            </select>
+            <select required>
+                <option value="">Select Action</option>
+                <option value="approve">Approve</option>
+                <option value="review">Review</option>
+                <option value="reject">Reject</option>
+            </select>
+            <button type="submit">Assign Workflow</button>
+        </form>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>User</th>
+                    <th>Action</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Example Workflow Entry -->
+                <tr>
+                    <td>John Doe</td>
+                    <td>Approve</td>
+                    <td>Pending</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+</body>
+</html>
